@@ -1,0 +1,6 @@
+@GqlApi_HostAddress = http://localhost:5299
+
+GET {{GqlApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
