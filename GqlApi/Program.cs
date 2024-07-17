@@ -1,6 +1,7 @@
 using Data;
 using GqlApi.Models.Animal;
 using GqlApi.Types;
+using GqlApi.Types.Sorting;
 using Microsoft.EntityFrameworkCore;
 using Migrations;
 
@@ -11,13 +12,14 @@ builder.Services.AddDbContext<CatalogContext>(p => p.UseSqlServer(builder.Config
 builder.Services.AddMigration<CatalogContext, CatalogContextSeed>();
 
 builder.Services.AddGraphQLServer()
-                //.AddQueryType<Query>()
-                .AddQueryType<DbQuery>()
+                .AddGqlApiTypes()
                 .AddProjections()
                 .AddFiltering()
+                .AddSorting()
                 .AddType<Dog>()
                 .AddType<Cat>()
                 .AddType<Parrot>()
+                //.AddType<ProductSortInputType>()
                 .ModifyOptions(p => 
                 { 
                     p.EnableOneOf = true;

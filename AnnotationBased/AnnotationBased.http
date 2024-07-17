@@ -1,0 +1,6 @@
+@AnnotationBased_HostAddress = http://localhost:5038
+
+GET {{AnnotationBased_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

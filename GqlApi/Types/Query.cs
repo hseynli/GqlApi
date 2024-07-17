@@ -2,9 +2,11 @@
 using GqlApi.Models.Animal;
 using GqlApi.Models.Enums;
 using GqlApi.Models.Mammal;
+using Models.EnityFramework;
 
 namespace GqlApi.Types;
 
+[QueryType]
 public class Query
 {
     public string SayHello(string name = "World") => $"Hello {name}!";
