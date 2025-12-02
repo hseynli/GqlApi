@@ -6,6 +6,27 @@ using Models.EnityFramework;
 
 namespace GqlApi.Types;
 
+/*
+ Queries:
+1. Query with filter
+query {
+  book {
+    title
+    author {
+      name
+    }
+  }
+}
+2.
+query env {
+  allCats(catLives: NINE) {
+    isEvil
+    lives
+    name
+  }
+}
+ */
+
 [QueryType]
 public class Query
 {
